@@ -18,6 +18,10 @@ function url2png(apiKey, privateKey) {
         if(options.force && typeof options.force !== 'boolean') throw new Error('force should be a boolean');
         if(options.protocol && options.protocol != 'https' && options.protocol != 'http') throw new Error('protocol should either be "https" or "http"');
         options.protocol = options.protocol || '';
+        if(options.user_agent) {
+            if(typeof options.user_agent !== 'string') throw new Error('user agent should be a string');
+            options.user_agent = encodeURIComponent(options.user_agent);
+        }
 
         url = 'url=' + encodeURIComponent(url);
         var optionsQuery = '';

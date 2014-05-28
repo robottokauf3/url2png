@@ -77,6 +77,12 @@ var screenshotStream = url2png.readURL(url, options);
       <td>-</td>
       <td>The protocol to use, can be 'https' or 'http' (blank to use protocol relative urls).</td>
     </tr>
+    <tr>
+      <td>user_agent</td>
+      <td>string</td>
+      <td>-</td>
+      <td>Custom user agent to use when requesting target page.</td>
+    </tr>
   </tbody>
 </table>
 
